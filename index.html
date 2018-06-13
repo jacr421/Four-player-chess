@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>chess</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="menu">
+        <button id='play'>Play</button>
+        <button>Rules</button>
+    </div>
+    <div class="rules">
+
+    </div>
+    <div class="container">
+
+        <button id="btn_menu">menu</button>
+        <div class="players">
+            <p>White</p>
+            <span class="player">0</span>
+            <p>Green</p>
+            <span class="player">0</span>
+            <p>Black</p>
+            <span class="player">0</span>
+            <p>Red</p>
+            <span class="player">0</span>
+        </div>
+
+        <div class="board">
+
+            <div class="figure main_dark rook dark_rook"></div>
+            <div class="figure main_dark knight dark_knight"></div>
+            <div class="figure main_dark bishop dark_bishop"></div>
+            <div class="figure main_dark queen dark_queen"></div>
+            <div class="figure main_dark king dark_king"></div>
+            <div class="figure main_dark bishop dark_bishop"></div>
+            <div class="figure main_dark knight dark_knight"></div>
+            <div class="figure main_dark rook dark_rook"></div>
+
+            <div class="figure pawn pawn_dark"></div>
+            <div class="figure pawn pawn_dark"></div>
+            <div class="figure pawn pawn_dark"></div>
+            <div class="figure pawn pawn_dark"></div>
+            <div class="figure pawn pawn_dark"></div>
+            <div class="figure pawn pawn_dark"></div>
+            <div class="figure pawn pawn_dark"></div>
+            <div class="figure pawn pawn_dark"></div>
+
+
+
+            <div class="figure main_red  rook red_rook"></div>
+            <div class="figure main_red  knight red_knight"></div>
+            <div class="figure main_red  bishop red_bishop"></div>
+            <div class="figure main_red  queen red_queen"></div>
+            <div class="figure main_red  king red_king"></div>
+            <div class="figure main_red  bishop red_bishop"></div>
+            <div class="figure main_red  knight red_knight"></div>
+            <div class="figure main_red  rook red_rook"></div>
+
+            <div class="figure pawn pawn_red"></div>
+            <div class="figure pawn pawn_red"></div>
+            <div class="figure pawn pawn_red"></div>
+            <div class="figure pawn pawn_red"></div>
+            <div class="figure pawn pawn_red"></div>
+            <div class="figure pawn pawn_red"></div>
+            <div class="figure pawn pawn_red"></div>
+            <div class="figure pawn pawn_red"></div>
+
+
+            <!--            white             -->
+            <div class="figure main_white  rook white_rook"></div>
+            <div class="figure main_white  knight white_knight"></div>
+            <div class="figure main_white  bishop white_bishop"></div>
+            <div class="figure main_white  queen white_queen"></div>
+            <div class="figure main_white  king white_king"></div>
+            <div class="figure main_white  bishop white_bishop"></div>
+            <div class="figure main_white  knight white_knight"></div>
+            <div class="figure main_white  rook white_rook"></div>
+
+            <div class="figure pawn pawn_white"></div>
+            <div class="figure pawn pawn_white"></div>
+            <div class="figure pawn pawn_white"></div>
+            <div class="figure pawn pawn_white"></div>
+            <div class="figure pawn pawn_white"></div>
+            <div class="figure pawn pawn_white"></div>
+            <div class="figure pawn pawn_white"></div>
+            <div class="figure pawn pawn_white"></div>
+
+
+            <div class="figure main_green rook green_rook"></div>
+            <div class="figure main_green knight green_knight"></div>
+            <div class="figure main_green bishop green_bishop"></div>
+            <div class="figure main_green queen green_queen"></div>
+            <div class="figure main_green king green_king"></div>
+            <div class="figure main_green bishop green_bishop"></div>
+            <div class="figure main_green knight green_knight"></div>
+            <div class="figure main_green rook green_rook"></div>
+
+            <div class="figure pawn pawn_green"></div>
+            <div class="figure pawn pawn_green"></div>
+            <div class="figure pawn pawn_green"></div>
+            <div class="figure pawn pawn_green"></div>
+            <div class="figure pawn pawn_green"></div>
+            <div class="figure pawn pawn_green"></div>
+            <div class="figure pawn pawn_green"></div>
+            <div class="figure pawn pawn_green"></div>
+            <div class="top">
+                <div class="gamecell  "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+            </div>
+            <div class="middle">
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+
+            </div>
+            <div class="bottom">
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+                <div class="gamecell gray"></div>
+                <div class="gamecell "></div>
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

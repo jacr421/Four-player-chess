@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.menu {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #F4E0F4;
+}
+
+button {
+    width: 200px;
+    margin: 80px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #3AE2CE;
+}
+
+#btn_menu {
+    width: 100px;
+    height: 60px;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    position: absolute;
+    left: 50px;
+    top: 10px;
+    margin: 0;
+}
+
+.container {
+    height: 90vh;
+    width: 100%;
+    display: none;
+    justify-content: space-around;
+
+}
+
+.players {
+    height: 90vh;
+    width: 200px;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .player {
+        margin: 15px;
+    }
+
+}
+
+p:first-child {
+    color: red;
+    font-size: 36px;
+    font-weight: 900
+}
+
+.gamecell {
+    height: 45px;
+    width: 45px;
+    border: 1px solid gray;
+}
+
+.top,
+.middle,
+.bottom {
+    display: flex;
+    flex-wrap: wrap;
+    width: 384px;
+    margin: 0 auto;
+}
+
+.board {
+    position: relative;
+    width: 743px;
+    margin: 0 auto;
+}
+
+.middle {
+    width: 743px;
+}
+
+
+
+.gray {
+    background-color: #ccc;
+}
+
+.white {
+    height: 45px;
+    width: 45px;
+    background-repeat: no-repeat;
+    background: url(../img/figures.png);
+    background-size: ;
+    position: absolute;
+    background-position: 270px 0px;
+    left: 488px;
+    top: 674px;
+}
+
+.figure {
+    transition: 0.7s;
+    height: 45px;
+    width: 45px;
+    background-repeat: no-repeat;
+    background: url(../img/figures.png);
+    position: absolute;
+}
+
+.pawn_red,
+.pawn_green,
+.main_green,
+.main_red {
+    background: url(../img/figures34%20.png);
+}
+
+.white_king,
+.red_king {
+    background-position: 270px 0px;
+}
+
+.dark_king,
+.green_king {
+    background-position: 270px 45px;
+
+}
+
+.white_queen,
+.red_queen {
+    background-position: 225px 0px;
+}
+
+.dark_queen,
+.green_queen {
+    background-position: 225px 45px;
+}
+
+.white_bishop,
+.red_bishop {
+    background-position: 181px 0px;
+}
+
+.dark_bishop,
+.green_bishop {
+    background-position: 181px 45px;
+}
+
+.white_knight,
+.red_knight {
+    background-position: 135px 0px;
+}
+
+.dark_knight,
+.green_knight {
+    background-position: 135px 45px;
+}
+
+.white_rook,
+.red_rook {
+    background-position: 90px 0px;
+}
+
+.dark_rook,
+.green_rook {
+    background-position: 90px 45px;
+}
+
+
+.pawn_white,
+.pawn_red {
+    background-position: 43px 0px;
+    top: 629px;
+    left: 181px;
+}
+
+.pawn_dark,
+.pawn_green {
+    background-position: 43px 45px;
+    top: 42px;
+    left: 181px;
+    /*        left: 54px;*/
+}
+
+.main_white {
+    top: 674px;
+    left: 181px;
+}
+
+.main_dark {
+    top: -3px;
+    left: 181px;
+}
+
+
+.pawn_green {
+    top: 144px;
+    left: 45px;
+}
+
+.pawn_red {
+    top: 144px;
+    left: 631px;
+}
